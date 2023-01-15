@@ -6,7 +6,7 @@ Demo link: [Mytheresa-demo.webm](https://user-images.githubusercontent.com/30463
 ## Getting Started
 
 ## Installation
-When you download it from the repository, do the following steps to start the application:
+When you download it from the repository (master branch), do the following steps to start the application:
 
  - npm install // it will download all the required dependencies
  - npm start // to run the application on localhost
