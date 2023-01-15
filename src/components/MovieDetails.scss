@@ -1,0 +1,101 @@
+$popular-color: bisque;
+$top-rated-color: aliceblue;
+$upcoming-color: yellow;
+$border-color: yellowgreen;
+
+@mixin popular {
+    color: $popular-color;
+    font-family: fantasy;
+}
+
+@mixin upcoming {
+    color: $upcoming-color;
+    font-family: cursive;
+}
+
+@mixin top-rated {
+    color: $top-rated-color;
+    font-family: serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    padding: 10px;
+
+    .primary-block {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        width: 100%;
+        height: 30em;
+
+        .poster-block {
+            width: 60%;
+
+            img {
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+
+        .description-area {
+            display: flex;
+            font-size: 16px;
+            flex-direction: column;
+            width: 40%;
+
+            button {
+                width: 50%;
+                height: 8%;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .Top-rated {
+            @include top-rated;
+
+            button {
+                background-color: khaki;
+            }
+        }
+
+        .Popular {
+            @include popular;
+
+            button {
+                background-color: burlywood;
+            }
+        }
+
+        .Upcoming {
+            @include upcoming;
+
+            button {
+                background-color: orange;
+            }
+        }
+    }
+
+    .secondary-block {
+        font-size: 16px;
+    }
+
+    .Upcoming {
+        @include upcoming;
+    }
+
+    .Popular {
+        @include popular;
+    }
+
+    .Top-rated {
+        @include top-rated;
+    }
+}

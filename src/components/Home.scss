@@ -1,0 +1,22 @@
+$body-color: red;
+$category-color: cornsilk;
+$nav-link-color: midnightblue;
+
+.body {
+  color: $body-color;
+}
+
+.nav-header {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  a {
+    font-size: 18px;
+    color: $nav-link-color;
+  }
+}
+
+.movie-category {
+  margin-left: 33%;
+  color: $category-color;
+}
